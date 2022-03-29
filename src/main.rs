@@ -21,4 +21,9 @@ fn main() {
 
     println!("The value of the outer x is {}", x);
 
+    //Shadowing allows you to change data types as well
+    let spaces = "   ";
+    let spaces = spaces.len();
+
+    println!("Spaces is: {}", spaces);
 }

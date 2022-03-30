@@ -49,4 +49,59 @@ fn main() {
     // Return the value and a boolean indicating whether there was overflow with the overflowing_* methods
     // Saturate at the value’s minimum or maximum values with saturating_* methods
 
+    // Rust also has two primitive types for floating-point numbers, which are numbers with decimal points.
+    // Rust’s floating-point types are f32 and f64, which are 32 bits and 64 bits in size, respectively.
+    // The default type is f64 because on modern CPUs it’s roughly the same speed as f32 but is capable of more precision. All floating-point types are signed.
+
+    // Floating-point numbers are represented according to the IEEE-754 standard. The f32 type is a single-precision float, and f64 has double precision.
+    //Integer division rounds down to the nearest integer. The following code shows how you’d use each numeric operation in a let statement:
+
+    // addition
+    let sum = 5 + 10;
+
+    // subtraction
+    let difference = 95.5 - 4.3;
+
+    // multiplication
+    let product = 4 * 30;
+
+    // division
+    let quotient = 56.7 / 32.2;
+    let floored = 2 / 3; // Results in 0
+
+    // remainder
+    let remainder = 43 % 5;
+
+    println!("Here come all those basic math solutions:\nSum:{}\nDiff:{}\nProduct:{}\nQuotient:{}\nFloored:{}\nRemainder:{}",sum, difference, product, quotient, floored, remainder);
+
+    //rust has two primitive compound types, the first of which is called a tuple
+
+    // A tuple is a general way of grouping together a number of values with a variety of types into one compound type.
+    // Tuples have a fixed length: once declared, they cannot grow or shrink in size.
+
+    //destructuring can be used to assign the values in a tuple to multiple variables at once.
+
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+
+    let tup = (500, 6.4, 1);
+
+    let (x, y, z) = tup;
+
+    println!("The value of y is: {}", y);
+
+    //here's how to declare an array. Note that all items in an array must be of the same type.
+
+    let a: [i32; 5] = [1, 2, 3, 4, 5];
+
+    //You can also initialize the array, this will fill the array with an initial value.
+
+    let a = [3; 5]; //Is the same as writing let a = [3, 3, 3, 3, 3];
+
+    //Arrays can be accessed like arrays in other languages, using indexing.
+
+    let a = [1, 2, 3, 4, 5];
+
+    let first = a[0];
+    let second = a[1];
+
 }
